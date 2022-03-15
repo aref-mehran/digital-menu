@@ -10,7 +10,7 @@
       <a :href="'tel:' + phone"><PhoneIcon /></a>
     </div>
     <div>
-      <span> TERÇA a DOMINGO das 18:00 às 23:30 </span>
+      <span> work time from  18:00 to 23:30 </span>
     </div>
   </footer>
 </template>

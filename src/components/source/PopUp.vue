@@ -2,7 +2,7 @@
   <div class="pop-info">
     <header>
       <ArrowBackIcon @click="closePopUp"></ArrowBackIcon>
-      <span>Detalhes do Item</span>
+      <span>ITEM DETAILS</span>
     </header>
     <section>
       <div>
@@ -13,7 +13,7 @@
         <h3>{{ data.name }}</h3>
         <span>{{ data.ingredients.join(", ") }}</span>
         <br />
-        <span class="price">R$ {{ data.price }}</span>
+        <span class="price">$ {{ data.price }}</span>
         <br />
       </div>
       <form>
@@ -27,7 +27,7 @@
             closePopUp()
           }"
         > 
-          Adicionar<br/>R${{ computedPrice(data.price)}}
+          Price<br/>${{ computedPrice(data.price)}}
         </button>
       </form>
     </section>

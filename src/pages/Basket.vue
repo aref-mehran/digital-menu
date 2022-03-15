@@ -3,17 +3,17 @@
     <header id='header-basket'>
       <div>
         <a class='iconarrowback' href='/digital-menu/#/'> <ArrowBackIcon /></a>
-        <h1> Cesta de compras <BasketIcon/> </h1>
+        <h1> shopping basket <BasketIcon/> </h1>
       </div>
       <nav>
         <ul>
-          <li>Cesta ({{ volume }})</li>
-          <li>Histórico</li>
+          <li>Basket ({{ volume }})</li>
+          <li>Historical</li>
         </ul>
       </nav>
     </header>
     <main>
-      <button @click='removeAll'>Limpar</button>
+      <button @click='removeAll'>Clean</button>
       <ul v-if='volume'>
         <li v-for='item in shoppingBasket'  :key='item[0]'>
           <h2>{{ item[0] }}</h2>
@@ -25,9 +25,9 @@
         </li>
       </ul>
       <div v-else class='empty-message'>
-        <h3>A sua cesta está vazio</h3>
+        <h3>Your basket is empty</h3>
 
-        <h5>Adicione seu lanche favorito aqui!</h5>
+        <h5>Add your favorite launch here!</h5>
       </div>
       <span v-show='volume' id='send-request'><SendIcon/> </span>
     </main>
