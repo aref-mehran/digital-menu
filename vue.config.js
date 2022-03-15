@@ -1,6 +1,7 @@
 module.exports = {
   publicPath: '/digital-menu',
   outputDir: '../digital-menu-build',
+
   chainWebpack: (config) => {
     config
       .plugin('html')
@@ -9,4 +10,14 @@ module.exports = {
         return args;
       });
   },
+
+  pluginOptions: {
+    i18n: {
+      locale: 'en',
+      fallbackLocale: 'en',
+      localeDir: 'locales',
+      enableInSFC: false,
+      enableBridge: false
+    }
+  }
 }

@@ -8,7 +8,7 @@
       <nav>
         <ul>
           <li>Basket ({{ volume }})</li>
-          <li>Historical</li>
+          <li> {{ $t('message') }} Historical</li>
         </ul>
       </nav>
     </header>
