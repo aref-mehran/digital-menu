@@ -17,8 +17,8 @@ export default {
   }
 }
 </script>
-<style>
-
+<style >
+@import "./rtl.scss";
 @import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@1,700&display=swap');
 
