@@ -9,10 +9,10 @@
           <span>
             {{ ingredients(item) }}
           </span>
-          <span> Grande:  ${{ item.price }} </span>
+          <span> {{$t('Grande')}}:  ${{ item.price }} </span>
         </div>
         <a :href="genereteMessage(item)">
-          <span>send  message</span>
+          <span>{{$t('send  message')}}</span>
           <WhatsappIcon></WhatsappIcon>
         </a>
       </li>
