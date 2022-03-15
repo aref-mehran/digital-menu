@@ -2,14 +2,14 @@
   <div class='card-container'>
     <ul v-for='(key, group) in items' :key='group'>
       <h3 class='title-group' :id='group'>{{ group }}</h3>
-      <li class="card" v-for='item in items[group]' :key='item.nome + item.id' :item='item'>
-        <img @click.prevent="openPopUp(item)" :src="item.imagem" loading="lazy" />
+      <li class="card" v-for='item in items[group]' :key='item.name + item.id' :item='item'>
+        <img @click.prevent="openPopUp(item)" :src="item.image" loading="lazy" />
         <div @click.prevent="openPopUp(item)">
-          <h3>{{ item.nome }}</h3>
+          <h3>{{ item.name }}</h3>
           <span>
             {{ ingredients(item) }}
           </span>
-          <span> Grande: R${{ item.preco }} </span>
+          <span> Grande: R${{ item.price }} </span>
         </div>
         <a :href="genereteMessage(item)">
           <span>Pedir Essa</span>
@@ -32,17 +32,17 @@ export default {
     ...mapActions("menuItems", ['loadData']),
 
     genereteMessage(item){
-      let message = encodeURI(`Olá, gostaria de pedir: *${item.nome}*`)
+      let message = encodeURI(`Olá, gostaria de pedir: *${item.name}*`)
       return `https://wa.me/${this.phone}?text=${message}`
     },
 
     ingredients(data){
       
-      let item = [...data.ingredientes ]
+      let item = [...data.ingredients ]
       
       const ITEM_LIMIT = 4
       
-      if( data.ingredientes.length > ITEM_LIMIT ){
+      if( data.ingredients.length > ITEM_LIMIT ){
         item = item.slice(0,3)
         item.push('...')
       }

@@ -7,13 +7,13 @@
     <section>
       <div>
         <figure>
-          <img draggable="false" :src="data.imagem" loading="lazy"/>
+          <img draggable="false" :src="data.image" loading="lazy"/>
           <img v-if='data.group == "pizzas"' src='https://static.expressodelivery.com.br/imagens/produtos/138004/180/Expresso-Delivery_31ae4e0ddac2ffaa959718b47c4587d7.png' loading="lazy" />
         </figure>
-        <h3>{{ data.nome }}</h3>
-        <span>{{ data.ingredientes.join(", ") }}</span>
+        <h3>{{ data.name }}</h3>
+        <span>{{ data.ingredients.join(", ") }}</span>
         <br />
-        <span class="price">R$ {{ data.preco }}</span>
+        <span class="price">R$ {{ data.price }}</span>
         <br />
       </div>
       <form>
@@ -27,7 +27,7 @@
             closePopUp()
           }"
         > 
-          Adicionar<br/>R${{ computedPrice(data.preco)}}
+          Adicionar<br/>R${{ computedPrice(data.price)}}
         </button>
       </form>
     </section>
