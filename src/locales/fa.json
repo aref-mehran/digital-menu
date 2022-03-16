@@ -1,4 +1,8 @@
 {
-  "Grande": "قیمت",
-  "send  message": "ارسال پیام"
+  "send message": "ارسال پیام",
+  "Price": "قیمت",
+  "ITEM DETAILS": "جزییات",
+  "work time from": "ساعات کاری",
+  "to": "تا",
+  "$": "تومان"
 }

@@ -10,7 +10,7 @@
       <a :href="'tel:' + phone"><PhoneIcon /></a>
     </div>
     <div>
-      <span> work time from  18:00 to 23:30 </span>
+      <span> {{$t('work time from')}}  18:00 {{$t('to')}} 23:30 </span>
     </div>
   </footer>
 </template>
